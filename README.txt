@@ -1,1 +1,1 @@
-CandyWorld.info
+Candyworld.info
