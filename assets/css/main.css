@@ -1599,8 +1599,8 @@
 	h1, h2, h3, h4, h5, h6 {
 		color: inherit;
 		font-weight: 300;
-		line-height: 1.75em;
-		margin-bottom: 1em;
+		line-height: 1.00em;
+		margin-bottom: 0em;
 		text-transform: uppercase;
 	}
 
@@ -2056,8 +2056,8 @@
 		input[type="submit"].special,
 		input[type="reset"].special,
 		.button.special {
-			background: #83d3c9;
-			border-color: #83d3c9;
+			background: #00A9E0;
+			border-color: #00A9E0;
 			color: #fff !important;
 		}
 
@@ -2065,8 +2065,8 @@
 			input[type="submit"].special:hover,
 			input[type="reset"].special:hover,
 			.button.special:hover {
-				background: #96dad1 !important;
-				border-color: #96dad1 !important;
+				background: #59CBE8 !important;
+				border-color: #59CBE8 !important;
 			}
 
 		input[type="button"].fit,
@@ -2097,7 +2097,7 @@
 		}
 
 		.wrapper.style2 {
-			background-color: #83d3c9;
+			background-color: #fff;
 			background-image: url("images/light-bl.svg"), url("images/light-br.svg");
 			background-position: bottom left, bottom right;
 			background-repeat: no-repeat, no-repeat;
@@ -2333,7 +2333,7 @@
 			}
 
 			.dropotron > li:hover > a {
-				background: #83d3c9;
+				background: #00A9E0;
 				color: #fff;
 			}
 
@@ -2386,13 +2386,12 @@
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #645862;
-		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
-		background-position: bottom left, bottom right, top left, top center;
+		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../../images/rochero.JPG");
+		background-position: top left, top right, top left, bottom center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
 		color: #fff;
-		cursor: default;
-		padding: 6em 0;
+		padding: 5em;
 		text-align: center;
 	}
 
@@ -2484,7 +2483,7 @@
 	#cta {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #645862;
-		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../../images/rochero.JPG");
 		background-position: top left, top right, top left, bottom center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
@@ -3023,7 +3022,7 @@
 				}
 
 				header.special {
-					margin-bottom: 3em;
+					margin-bottom: 0em;
 					padding-left: 1.5em;
 					padding-right: 1.5em;
 				}
@@ -3034,7 +3033,7 @@
 
 					header.special .icon {
 						font-size: 0.75em;
-						top: 1.5em;
+						top: 0em;
 					}
 
 				header p {
