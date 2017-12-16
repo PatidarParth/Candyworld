@@ -48,7 +48,12 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
-
+#directionFont {
+	font-size: 15px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #E87722;
+}
 /* Box Model */
 
 *, *:before, *:after {
@@ -452,6 +457,8 @@ body {
 
 .\-6u {
 	margin-left: 50%;
+	border-right: solid 1px transparent;
+
 }
 
 .\-5u {
@@ -665,6 +672,8 @@ body {
 
 	.\-6u\28wide\29 {
 		margin-left: 50%;
+		border-right: solid 1px transparent;
+
 	}
 
 	.\-5u\28wide\29 {
@@ -880,6 +889,8 @@ body {
 
 	.\-6u\28normal\29 {
 		margin-left: 50%;
+		border-right: solid 1px transparent;
+
 	}
 
 	.\-5u\28normal\29 {
@@ -1095,6 +1106,8 @@ body {
 
 	.\-6u\28narrow\29 {
 		margin-left: 50%;
+		border-right: solid 1px transparent;
+
 	}
 
 	.\-5u\28narrow\29 {
@@ -1310,6 +1323,7 @@ body {
 
 	.\-6u\28narrower\29 {
 		margin-left: 50%;
+		border-right: solid 1px transparent;
 	}
 
 	.\-5u\28narrower\29 {
@@ -1525,6 +1539,8 @@ body {
 
 	.\-6u\28mobile\29 {
 		margin-left: 50%;
+		border-right: solid 1px transparent;
+
 	}
 
 	.\-5u\28mobile\29 {
@@ -1666,11 +1682,11 @@ header.special:before, header.special:after {
 	border-bottom: solid 1.5px;
 	border-top: solid 1.5px;
 	content: '';
-	height: 7px;
-	opacity: 0.1;
+	height: 10px;
+	opacity: 0.5;
 	position: absolute;
 	top: 1.75em;
-	width: 43%;
+	width: 44%;
 }
 
 header.special:before {
@@ -1690,19 +1706,12 @@ header.special h2 + p {
 	padding-top: 1.5em;
 }
 
-header.special .icon {
-	cursor: default;
-	height: 7em;
-	left: 0;
+header.special img {
+	margin: 0 auto;
 	position: absolute;
-	text-align: center;
-	top: 1em;
-	width: 100%;
-}
-
-header.special .icon:before {
-	font-size: 3.5em;
-	opacity: 0.35;
+	top: -1.3em;
+	right:45%;
+	left:47%;
 }
 
 footer > :last-child {
@@ -2132,7 +2141,9 @@ input[type="reset"].small,
 	padding: 4em;
 }
 .wrapper.style4 img {
-	width: 55em;
+	margin: 0 auto;
+  width: 100%;
+	text-align: center;
 }
 /* Header */
 
@@ -2379,9 +2390,11 @@ input[type="reset"].small,
 .panel {
 	padding: 0 18px;
 	background-color: white;
+	text-align: center;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
+
 }
 
 
