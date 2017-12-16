@@ -48,45 +48,7 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
-.accordion {
-    background-color: #f79642;
-    color: #FFFFFF;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 20px;
-    transition: 0.4s;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		font-weight: 300px;
-}
 
-.active, .accordion:hover {
-    background-color: #E87722;
-}
-
-.accordion:after {
-    content: '\002B';
-    color:  #FFFFFF;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-}
-
-.active:after {
-    content: "\2212";
-}
-
-.panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
 /* Box Model */
 
 *, *:before, *:after {
@@ -2169,7 +2131,9 @@ input[type="reset"].small,
 	color: inherit;
 	padding: 4em;
 }
-
+.wrapper.style4 img {
+	width: 55em;
+}
 /* Header */
 
 @-moz-keyframes reveal-header {
@@ -2293,7 +2257,7 @@ input[type="reset"].small,
 	-webkit-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	background: rgba(188, 202, 206, 0.15);
+	background-color: rgba(188, 202, 206, 0.15);
 }
 
 #header nav ul li.current > a {
@@ -2329,7 +2293,6 @@ input[type="reset"].small,
 }
 
 /* Dropotron */
-
 .dropotron {
 	background: #fff;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
@@ -2379,6 +2342,48 @@ input[type="reset"].small,
 .dropotron > li:first-child {
 	border-top: 0;
 }
+
+/* accordion */
+.accordion {
+	background-color: #f79642;
+	color: #FFFFFF;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 20px;
+	transition: 0.4s;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: 300px;
+}
+
+.accordion:hover {
+	background-color: #E87722;
+}
+
+.accordion:after {
+	content: '\002B';
+	color:  #FFFFFF;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.accordion.active:after {
+	content: "\2212";
+}
+
+.panel {
+	padding: 0 18px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
 
 /* Banner */
 
@@ -3222,4 +3227,5 @@ body.index #main {
 		width: 50px;
 		height: 34px;
 	}
+
 }
