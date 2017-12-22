@@ -1606,6 +1606,7 @@ a:hover {
 }
 
 strong, b {
+	color:#DF4661;
 	font-weight: 400;
 }
 
@@ -2270,7 +2271,7 @@ input[type="reset"].small,
 	-webkit-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	background-color: rgba(188, 202, 206, 0.15);
+	background-color: rgba(150, 169, 224, .15);
 }
 
 #header nav ul li.current > a {
