@@ -13,6 +13,25 @@
 	<!-- Favicon -->
 	<link rel="icon" href="images/logo.png">
 </head>
+<script type="text/javascript">
+function formValidation(){
+	var email = document.register.email;
+	if(!emailVal(email)){
+		return false;
+	}
+	return true;
+}
+
+function emailVal(email){
+	var emailcheck = /^([A-Za-z0-9._-])+@([a-z])+\.([a-z.])+$/;
+	if(!email.value.match(emailcheck)){
+		alert("Email is invalid");
+		email.focus();
+		return false;
+	}
+	return true;
+}
+</script>
 <body class="right-sidebar">
 	<div id="page-wrapper">
 
@@ -30,7 +49,7 @@
 							</ul>
 						</li>
 						<li><a href="story.html"><font size="4px">Our Story</font></a></li>
-						<li><a href="store.html"><font size="4px">Stores</font></a></li>
+						<li><a href="store.html"><font size="4px">Locations</font></a></li>
 						<!-- <li class="current"><a href="contact.html"><font size="4px">Contact Us</font></a></li> -->
 						<!-- <li><a href="#" class="button special">Sign Up</a></li> -->
 					</ul>
@@ -52,23 +71,23 @@
 
 							<!-- Content -->
 								<div class="content">
-									<form>
+									<form method = "POST" name="register" action = "emailContact.php" onsubmit="return formValidation();">
 										<div class="row 50%">
 											<div class="6u 12u(mobile)">
-												<input type="text" name="name" placeholder="Name" />
+												<input type="text" name="name" id="name" placeholder="Name" />
 											</div>
 											<div class="6u 12u(mobile)">
-												<input type="text" name="email" placeholder="Email" />
+												<input type="text" id="email" name = "email" placeholder="Email" />
 											</div>
 										</div>
 										<div class="row 50%">
 											<div class="12u">
-												<input type="text" name="subject" placeholder="Subject" />
+												<input type="text" id="subject" name="subject" placeholder="Subject" />
 											</div>
 										</div>
 										<div class="row 50%">
 											<div class="12u">
-												<textarea name="message" placeholder="Message" rows="7"></textarea>
+												<textarea id="message" name="message" placeholder="Message" rows="7"></textarea>
 											</div>
 										</div>
 										<div class="row">
@@ -89,10 +108,8 @@
 				<footer id="footer">
 
 					<ul class="icons">
-						<li><a href="https://twitter.com/CandyWorldUSA" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="https://www.facebook.com/CandyWorldUSA" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
 						<li><a href="https://www.instagram.com/candyyworldd/" class="icon circle fa-instagram"><span class="label">Instragram</span></a></li>
-						<li><a href="https://www.pinterest.com/candyworld/" class="icon circle fa-pinterest"><span class="label">Pinterest</span></a></li>
 					</ul>
 
 					<ul class="copyright">
