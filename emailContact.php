@@ -1,8 +1,4 @@
 <?php
-$mailpath = 'PHPmailer';
-$path = get_include_path();
-set_include_path($path . PATH_SEPARATOR . $mailpath);
-require('PHPmailer/PHPMailerAutoload.php');
 
 
 	$name = $_POST["name"];
@@ -10,28 +6,18 @@ require('PHPmailer/PHPMailerAutoload.php');
 	$subject = $_POST['subject'];
 	$message = $_POST['message'];
 
-	$mail = new PHPMailer();
-	$mail->isSMTP();
-	$mail->Host = 'smtp.gmail.com';
-	$mail->Port = 587;
-	$mail->SMTPSecure = "tls";
-	$mail->SMTPAuth = true;
-	$mail->Username = "pjpatidar16@gmail.com";
-	$mail->Password = "basketball4life";
+	$to = "pjpatidar16@gmail.com";
 
-	$mail->setFrom('pjpatidar16@gmail.com');
-	$mail->addAddress('pjpatidar16@gmail.com');     // Add a recipient
+	$headers = "From: $name \r\n";
 
-	$mail->Subject = 'From Candy World Website - ';
-  $mail->Body = ' Reply back to ';
+	$headers .= "Reply To: $email \r\n";
 
-  if (!$mail->send())
-  {
-		echo !extension_loaded('openssl')?"Not Available":"Available";
-		echo $mail->Subject;
-    echo 'Not sent' . $mail->ErrorInfo;
-  }
-  else {
-    echo 'Sent';
-  }
+	$sent = mail($to,$subject,$message,$headers);
+	
+	if ($sent)
+	{
+		header("Location: http://localhost:8082/candyworld/index.html");
+	} else {
+		echo "There has been an error sending your message. Please try later.";
+	}
 ?>
